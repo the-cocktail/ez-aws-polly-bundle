@@ -1,0 +1,5 @@
+services:
+  ez_aws_polly.slot.createspeech:
+      class: TheCocktail\EzAwsPolly\Slot\CreatePollySpeechSlot
+      tags:
+          - {name: 'ezpublish.api.slot'}
