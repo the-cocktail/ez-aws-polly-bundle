@@ -2,7 +2,8 @@
   "name": "the-cocktail/ez-aws-polly-bundle",
   "description": "Allows to use Polly with eZ Contents",
   "require": {
-    "the-cocktail/aws-polly": "dev-master"
+    "the-cocktail/aws-polly": "dev-master",
+    "maxbeckers/amazon-alexa-bundle": "0.*"
   },
   "repositories": [
     {
