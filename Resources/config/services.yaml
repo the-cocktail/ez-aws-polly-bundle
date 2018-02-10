@@ -1,5 +1,29 @@
 services:
-  ez_aws_polly.slot.createspeech:
-      class: TheCocktail\EzAwsPolly\Slot\CreatePollySpeechSlot
+  ez_aws_polly.client:
+      class: TheCocktail\Aws\Polly\TheCocktailPollyClient
+      arguments:
+          - '@ez_aws_polly.speech_builder'
+          - '@oneup_flysystem.polly_files_filesystem'
+          -
+              version: 'latest'
+              region: '%aws_region%'
+              credentials:
+                  key: '%aws_key%'
+                  secret: '%aws_secret%'
+
+  ez_aws_polly.speech_builder:
+      class: TheCocktail\Aws\Polly\SpeechBuilder
+
+  ez_aws_polly.converter.content:
+      class: TheCocktail\EzAwsPollyBundle\Transformer\SSMLTransformer
+      arguments:
+          - '@ezpublish.api.service.content'
+          - '@maxbeckers_amazon_alexa.ssml_generator'
+
+  ez_aws_polly.slot.create_speech:
+      class: TheCocktail\EzAwsPollyBundle\Slot\CreatePollySpeechSlot
+      arguments:
+          - '@ez_aws_polly.client'
+          - '@ez_aws_polly.converter.content'
       tags:
-          - {name: 'ezpublish.api.slot'}
+          - { name: 'ezpublish.api.slot', signal: ContentService\UpdateContentSignal }

@@ -4,7 +4,13 @@
   "require": {
     "the-cocktail/aws-polly": "dev-master"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "/home/carlos/workspace/aws/src/Polly"
+    }
+  ],
   "autoload": {
-    "psr-4": { "TheCocktail\\EzAwsPollyBundle": "" },
+    "psr-4": { "TheCocktail\\EzAwsPollyBundle\\": "" }
   }
 }
