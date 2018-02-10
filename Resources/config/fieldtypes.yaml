@@ -1,0 +1,16 @@
+services:
+    thecocktail_aws_polly.fieldtype.ezawspollyfile:
+        class: TheCocktail\EzAwsPollyBundle\Core\FieldType\AwsPollyFile\Type
+        parent: ezpublish.fieldType
+        tags:
+            - {name: ezpublish.fieldType, alias: ezawspollyfile}
+
+    thecocktail_aws_polly.fieldtype.indexable.awspollybinaryfile:
+        class: "%ezpublish.fieldType.indexable.ezbinaryfile.class%"
+        tags:
+          - {name: ezpublish.fieldType.indexable, alias: ezawspollyfile}
+
+    thecocktail_aws_polly.fieldType.ezawspollyfile.converter:
+        class: "%ezpublish.fieldType.ezbinaryfile.converter.class%"
+        tags:
+            - {name: ezpublish.storageEngine.legacy.converter, alias: ezawspollyfile}
