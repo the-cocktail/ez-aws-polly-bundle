@@ -1,0 +1,12 @@
+system:
+    default:
+        yui:
+            modules:
+                thecocktail-awspollyfile-field-edit-view:
+                    requires: ['ez-binarybase-editview', 'awspollyfileeditview-ez-template', 'event-tap']
+                    path: "bundles/thecocktailezawspolly/js/views/field/thecocktail-awspollyfile-edit-view.js"
+                awspollyfileeditview-ez-template:
+                    type: 'template'
+                    path: "%ez_platformui.public_dir%/templates/fields/edit/binaryfile.hbt"
+                ez-contenteditformview:
+                    requires: ['thecocktail-awspollyfile-field-edit-view']
