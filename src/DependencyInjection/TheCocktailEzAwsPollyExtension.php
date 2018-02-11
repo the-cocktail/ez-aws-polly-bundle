@@ -19,7 +19,6 @@ class TheCocktailEzAwsPollyExtension extends Extension implements PrependExtensi
             $configs['platformui/yui.yaml'] = 'ez_platformui';
         }
 
-
         foreach ($configs as $fileName => $extensionName) {
             $configFile = __DIR__ . '/../Resources/config/' . $fileName;
             $config = Yaml::parse(file_get_contents($configFile));

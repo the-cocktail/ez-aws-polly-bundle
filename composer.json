@@ -1,17 +1,13 @@
 {
   "name": "the-cocktail/ez-aws-polly-bundle",
   "description": "Allows to use Polly with eZ Contents",
+  "license": "MIT",
   "require": {
-    "the-cocktail/aws-polly": "dev-master",
+    "kaliop/ezworkflowenginebundle": "^1.0",
     "maxbeckers/amazon-alexa-bundle": "0.*"
+    "the-cocktail/php-aws-polly": "0.*",
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "/home/carlos/workspace/aws/src/Polly"
-    }
-  ],
   "autoload": {
-    "psr-4": { "TheCocktail\\EzAwsPollyBundle\\": "" }
+    "psr-4": { "TheCocktail\\EzAwsPollyBundle\\": "src" }
   }
 }

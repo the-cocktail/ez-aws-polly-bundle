@@ -20,7 +20,6 @@ services:
     ez_aws_polly.transformer.ssml_transformer:
         class: TheCocktail\EzAwsPollyBundle\Transformer\SSMLTransformer
         arguments:
-            - '@ezpublish.api.service.content'
             - '@maxbeckers_amazon_alexa.ssml_generator'
 
     ez_aws_polly.core.speech_creator:
@@ -28,3 +27,4 @@ services:
         arguments:
            - '@ezpublish.api.service.content'
            - '@ez_aws_polly.transformer.ssml_transformer'
+           - '@ez_aws_polly.client'

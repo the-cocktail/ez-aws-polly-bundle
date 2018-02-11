@@ -1,0 +1,44 @@
+-
+    type: workflow
+    signal: ContentService\PublishVersionSignal
+    avoid_recursion: true
+
+-
+    type: content
+    mode: load
+    match:
+        content_id: workflow:signal:content_id
+    references:
+        -
+            identifier: content_type_as
+            attribute: content_type_identifier
+        -
+            identifier: content_id
+            attribute: id
+
+# unless content type is folder, stop here
+-
+    type: workflow
+    mode: cancel
+    unless:
+        "reference:content_type_as":
+            eq: "folder"
+
+-
+    type: process
+    mode: run
+    command: php
+    arguments:
+        - '../app/console'
+        - 'the-cocktail:aws-polly:generate-file'
+        - 'reference:content_id'
+        - 'polly-file.mp3'
+
+-
+    type: content
+    mode: update
+    match:
+        content_id: workflow:signal:content_id
+    attributes:
+        polly:
+            inputUri: "./var/storage/polly/polly-file.mp3"
