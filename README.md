@@ -85,7 +85,10 @@ but you can take that workflow definition as the starting point to add your owns
 * SSML is hardcoded format for now, but will be made configurable in the future. 
 
 * Transformation of RichText files are very very basic for now. It just transform to html and
-strip all tags except `<p>`. 
+strip all tags except `<p>`.
+
+* For adding the sound file to the content, the field identifier of the `ezawspollyfile` must be
+called `polly`.  
 
 ## Ideas for the future
 
