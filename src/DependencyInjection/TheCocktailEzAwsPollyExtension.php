@@ -17,6 +17,7 @@ class TheCocktailEzAwsPollyExtension extends Extension implements PrependExtensi
         $activatedBundles = array_keys($container->getParameter('kernel.bundles'));
         if (in_array('eZPlatformUIBundle', $activatedBundles, true)) {
             $configs['platformui/yui.yaml'] = 'ez_platformui';
+            $configs['ezplatform.yaml'] = 'ezpublish';
         }
 
         foreach ($configs as $fileName => $extensionName) {

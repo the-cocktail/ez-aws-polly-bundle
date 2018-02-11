@@ -24,3 +24,21 @@ services:
             - "@ezpublish.core.io.mimeTypeDetector"
         tags:
             - {name: ezpublish.fieldType.externalStorageHandler, alias: ezawspollyfile}
+
+    thecocktail_aws_polly.field_type_processor.ezawspollyfile:
+        class: "%ezpublish_rest.field_type_processor.ezbinaryfile.class%"
+        factory: ["@ezpublish_rest.factory", getBinaryFileFieldTypeProcessor]
+        arguments:
+            - "@ezpublish.core.io.default_url_decorator"
+        tags:
+            - { name: ezpublish_rest.field_type_processor, alias: ezawspollyfile }
+
+    thecocktail_aws_polly.fieldtype.ezawspollyfile.externalStorage:
+        class: "%ezpublish.fieldType.ezbinaryfile.externalStorage.class%"
+        arguments:
+            - "@ezpublish.fieldType.ezbinaryfile.storage_gateway"
+            - "@ezpublish.fieldType.ezbinaryfile.io_service"
+            - "@ezpublish.fieldType.ezbinaryfile.pathGenerator"
+            - "@ezpublish.core.io.mimeTypeDetector"
+        tags:
+            - {name: ezpublish.fieldType.externalStorageHandler, alias: ezawspollyfile}
