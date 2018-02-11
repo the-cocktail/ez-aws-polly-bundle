@@ -1,0 +1,30 @@
+.ez-view-awspollyfileeditview .ez-binaryfile-input-ui {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ez-view-awspollyfileeditview .ez-binaryfile-content:before {
+    display: block;
+    float: left;
+}
+
+.ez-view-awspollyfileeditview .ez-binaryfile-content:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.ez-view-awspollyfileeditview .ez-binaryfile-properties {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+}
+
+.ez-view-awspollyfileeditview .ez-binaryfile-properties-download {
+    margin-top: 1em;
+}
+
+.ez-view-awspollyfileeditview .ez-field-description {
+    margin: 0;
+}

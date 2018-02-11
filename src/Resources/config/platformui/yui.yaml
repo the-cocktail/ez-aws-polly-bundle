@@ -10,3 +10,16 @@ system:
                     path: "%ez_platformui.public_dir%/templates/fields/edit/binaryfile.hbt"
                 ez-contenteditformview:
                     requires: ['thecocktail-awspollyfile-field-edit-view']
+                thecocktail-awspollyfile-view:
+                    requires: ['ez-fieldview', 'awspollyfileview-ez-template']
+                    path: "bundles/thecocktailezawspolly/js/views/field/thecocktail-awspollyfile-view.js"
+                awspollyfileview-ez-template:
+                    type: 'template'
+                    path: "%ez_platformui.public_dir%/templates/fields/view/binaryfile.hbt"
+                ez-rawcontentview:
+                    requires:
+                        - "thecocktail-awspollyfile-view"
+        css:
+            files:
+                - 'bundles/thecocktailezawspolly/css/views/field/edit/awspollyfile.css'
+                - 'bundles/thecocktailezawspolly/css/theme/views/field/edit/awspollyfile.css'

@@ -1,0 +1,11 @@
+{% block ezawspollyfile_field %}
+    {% spaceless %}
+        {% if not ez_is_field_empty( content, field ) %}
+            {% set route_reference = ez_route( 'ez_content_download', { 'content': content, 'fieldIdentifier': field.fieldDefIdentifier } ) %}
+            <audio controls width="300" height="30" src="{{ path( route_reference ) }}" preload="none">
+                <a href="{{ path( route_reference ) }}"
+                        {{ block( 'field_attributes' ) }}>{{ field.value.fileName }}</a>&nbsp;({{ field.value.fileSize|ez_file_size( 1 ) }})
+            </audio>
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}
