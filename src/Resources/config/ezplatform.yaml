@@ -2,3 +2,12 @@ system:
     default:
         field_templates:
             - {template: "@TheCocktailEzAwsPolly/content_fields.html.twig", priority: 0}
+        content_view:
+            ssml:
+                folder:
+                    template: "@TheCocktailEzAwsPolly/ssml/folder.html.twig"
+                    match:
+                        Identifier\ContentType: ['folder']
+                default:
+                    template: "@TheCocktailEzAwsPolly/ssml.html.twig"
+                    match: ~

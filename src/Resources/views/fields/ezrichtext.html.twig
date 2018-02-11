@@ -1,0 +1,4 @@
+{% block ezrichtext_field %}
+    {%- set field_value = field.value.xml|richtext_to_html5 -%}
+    {{ field_value|striptags('<p>')|raw }}
+{% endblock %}

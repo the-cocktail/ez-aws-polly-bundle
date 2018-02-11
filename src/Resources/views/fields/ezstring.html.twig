@@ -1,0 +1,6 @@
+{% block ezstring_field %}
+    {% spaceless %}
+        {% set field_value = field.value.text %}
+        {{ field_value }}
+    {% endspaceless %}
+{% endblock %}

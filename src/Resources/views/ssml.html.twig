@@ -1,0 +1,5 @@
+<speak>{{ ez_content_name(content) }}</speak>
+{% for field in content.fieldsByLanguage(language|default(null)) %}
+    <speak>{{ field.fieldDefIdentifier }}</speak>
+    {{ ez_render_field(content, field.fieldDefIdentifier) }}
+{% endfor %}

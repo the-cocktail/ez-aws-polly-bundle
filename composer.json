@@ -4,7 +4,6 @@
   "license": "MIT",
   "require": {
     "kaliop/ezworkflowenginebundle": "^1.0",
-    "maxbeckers/amazon-alexa-bundle": "0.*",
     "the-cocktail/php-aws-polly": "0.*"
   },
   "autoload": {
