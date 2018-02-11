@@ -1,0 +1,14 @@
+<speak>
+    <prosody pitch="x-high">
+    {{ ez_content_name(content) }}
+    </prosody>
+
+    {{ ez_render_field(content, 'short_name', {
+        'template': '@TheCocktailEzAwsPolly/fields/ezstring.html.twig'
+    }) }}
+
+    {{ ez_render_field(content, 'description', {
+        'template': '@TheCocktailEzAwsPolly/fields/ezrichtext.html.twig'
+    }) }}
+
+</speak>

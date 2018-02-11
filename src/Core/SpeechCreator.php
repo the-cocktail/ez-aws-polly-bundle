@@ -13,11 +13,17 @@ class SpeechCreator
 {
     protected $contentService;
 
+    protected $contentTextExtractor;
+
     protected $ssmlTransformer;
 
     protected $pollyClient;
 
-    public function __construct(ContentService $contentService, SSMLTransformer $ssmlTransformer, TheCocktailPollyClient $pollyClient)
+    public function __construct(
+        ContentService $contentService,
+        SSMLTransformer $ssmlTransformer,
+        TheCocktailPollyClient $pollyClient
+    )
     {
         $this->contentService = $contentService;
         $this->ssmlTransformer = $ssmlTransformer;
@@ -28,9 +34,9 @@ class SpeechCreator
     {
         $content = $this->contentService->loadContent($contentId);
 
-        $ssml = $this->ssmlTransformer->transformToSSML($content);
+        $contentText = $this->ssmlTransformer->extractTextFromContent($content);
 
-        $speech = new Speech($ssml);
+        $speech = new Speech(['text' => $contentText, 'textType' => 'ssml']);
 
         $this->pollyClient->generateSpeechFile($speech, $destinationPath);
     }

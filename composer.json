@@ -1,10 +1,19 @@
 {
   "name": "the-cocktail/ez-aws-polly-bundle",
   "description": "Allows to use Polly with eZ Contents",
-  "license": "MIT",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Carlos Revillo",
+      "email": "crevillo@gmail.com"
+    },
+    {
+      "name": "The Ruby Room At The Cocktail",
+      "email": "ruby@the-cocktial.com"
+    }
+  ],
   "require": {
     "kaliop/ezworkflowenginebundle": "^1.0",
-    "maxbeckers/amazon-alexa-bundle": "0.*",
     "the-cocktail/php-aws-polly": "0.*"
   },
   "autoload": {
