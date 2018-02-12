@@ -53,6 +53,10 @@ Also, you will need to add your aws credentials as params. add something like th
 
 ```
 
+Finally, you need to add a field to the content type(s) you want to work with. The default bundle assumes
+you will do that with folders. You'll be adding an `ezawspollyfile` to your `folder` content type and that you
+will set `polly` as the identifier for this field. 
+
 ## How it works
 
 The bundle adds a new fieldtype `ezawspollyfile` to your eZPlatform installation. This fieldtype is, for now,

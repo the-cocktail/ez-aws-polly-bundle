@@ -14,7 +14,7 @@
   ],
   "require": {
     "kaliop/ezworkflowenginebundle": "^1.0",
-    "the-cocktail/php-aws-polly": "0.*"
+    "the-cocktail/php-aws-polly": "^0.2.1"
   },
   "autoload": {
     "psr-4": { "TheCocktail\\EzAwsPollyBundle\\": "src" }
