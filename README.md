@@ -108,7 +108,20 @@ you can use and that fits better with the language of the content to be speeched
 * [Getting Started with Amazon Polly](https://aws.amazon.com/polly/getting-started/?nc1=h_ls)
 * [SSML Specification](https://www.w3.org/TR/speech-synthesis11/)
 
+## Demo
 
-P.S: Thanks so much to @gggeek and all the ez publish community for giving some hints even on Saturday. ;)
+See this video to get an idea on how it works. 
+
+[![eZ Aws Polly in action](https://img.youtube.com/vi/IzNAkje4Z4w/0.jpg)](https://www.youtube.com/watch?v=IzNAkje4Z4w)
+
+And here's the mp3 created by Aws Polly. 
+
+<audio controls preload> 
+    <source src="welcome-to-ez.mp3
+"></source> 
+    <a href="welcome-to-ez.mp3">welcome to ez</a> 
+</audio>
+
+P.S: Thanks so much to @gggeek, @ilukac and all the ez publish community for giving some hints even on Saturday. ;)
 
 
