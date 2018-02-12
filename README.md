@@ -116,11 +116,7 @@ See this video to get an idea on how it works.
 
 And here's the mp3 created by Aws Polly. 
 
-<audio controls preload> 
-    <source src="welcome-to-ez.mp3
-"></source> 
-    <a href="welcome-to-ez.mp3">welcome to ez</a> 
-</audio>
+[![eZ Aws Polly in action](https://img.youtube.com/vi/76gysaqK1EU/0.jpg)](https://www.youtube.com/watch?v=76gysaqK1EU)
 
 P.S: Thanks so much to @gggeek, @ilukac and all the ez publish community for giving some hints even on Saturday. ;)
 
